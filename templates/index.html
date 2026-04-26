@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heart Disease Prediction Form</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Heart Disease Form</h2>
+
+    <form action="/predict" method="POST">
+
+        <label>Age</label>
+        <input type="number" name="age" required>
+
+        <label>Sex (1 = Male, 0 = Female)</label>
+        <input type="number" name="sex" required>
+
+        <label>Chest Pain Type (cp)</label>
+        <input type="number" name="cp" required>
+
+        <label>Resting Blood Pressure (trestbps)</label>
+        <input type="number" name="trestbps" required>
+
+        <label>Cholesterol (chol)</label>
+        <input type="number" name="chol" required>
+
+        <label>Fasting Blood Sugar (fbs)</label>
+        <input type="number" name="fbs" required>
+
+        <label>Rest ECG (restecg)</label>
+        <input type="number" name="restecg" required>
+
+        <label>Max Heart Rate (thalach)</label>
+        <input type="number" name="thalach" required>
+
+        <label>Exercise Induced Angina (exang)</label>
+        <input type="number" name="exang" required>
+
+        <label>Oldpeak</label>
+        <input type="number" step="any" name="oldpeak" required>
+
+        <label>Slope</label>
+        <input type="number" name="slope" required>
+
+        <label>Number of Vessels (ca)</label>
+        <input type="number" name="ca" required>
+
+        <label>Thal</label>
+        <input type="number" name="thal" required>
+
+        <button type="submit">Predict</button>
+    </form>
+</div>
+
+</body>
+</html>
